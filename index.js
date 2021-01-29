@@ -5,11 +5,11 @@ const io = require('socket.io')(http);
 
 const port = 3000;
 
-const interval = 1000;
+const interval = 1000; // new data every second 
 
-const intitalPoints = 10 * 60;
+const intitalPoints = 10 * 60; // 10 min of data 
 
-
+// add initial data on start up
 for(i = 0; i < intitalPoints; i++) {
     data.updateData(interval)
 }

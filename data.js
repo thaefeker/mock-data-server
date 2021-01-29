@@ -10,7 +10,7 @@ const dataPoints = [
       value_4: 2.2029563078484813,
       value_5: 4.606104435176448,
       value_6: 42.653168242473356,
-      value_7: 92.869628362317,
+      value_7: 72.869628362317,
       value_8: 20.701142658393366,
       value_9: 53.3970101900164,
       value_10: 18.93689206087437,
@@ -20,19 +20,16 @@ const dataPoints = [
   },
 ];
 
-let counter = 0;
-
 function randomInteger(min, max) {
   return Math.random() * (max - min + 1) + min;
 }
 
 function updateData(interval) {
-    const latestValues = dataPoints[0].values;
+  const latestValues = dataPoints[0].values;
   let values = { ...latestValues };
 
   for (const [key, value] of Object.entries(latestValues)) {
-        values[key] = Math.abs(randomInteger(value - 20, 80));
-
+    values[key] = Math.abs(randomInteger(value - 20, 80));
   }
 
   dataPoints.unshift({
