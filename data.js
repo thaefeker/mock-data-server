@@ -36,7 +36,6 @@ function updateData(interval) {
     date: moment(dataPoints[0].date).add(interval, "milliseconds"),
     values,
   });
-  counter++;
 }
 
 module.exports = {
